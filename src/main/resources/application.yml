@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: microservice-email
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost/microservice_email
+    username: root
+    password: root
+
+  jpa:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: *****@gmail.com
+    password: *****************
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+
+  rabbitmq:
+    addresses: *********
+
+server:
+  port: 8080
